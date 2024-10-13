@@ -1,0 +1,63 @@
+body{
+    font-family: "Afacad Flux", sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.package-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 800px;
+}
+
+.package-container header h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.package-container section p {
+    margin-bottom: 10px;
+}
+
+.package-container footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.package-container footer span {
+    margin-right: 10px;
+}
+
+#header {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .package-container {
+        padding: 15px;
+    }
+
+    .package-container header h2 {
+        font-size: 1.5em;
+    }
+}

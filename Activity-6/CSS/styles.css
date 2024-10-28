@@ -1,0 +1,19 @@
+body{
+    font-family: "Afacad Flux", sans-serif;
+    max-width: 500px;
+    margin: auto;
+}
+
+.messages{
+    margin-bottom: 25px;
+}
+
+.out-message {
+padding: 5px;
+background-color: whitesmoke;
+}
+
+.in-message {
+    padding: 5px;
+    background-color: aliceblue;
+}

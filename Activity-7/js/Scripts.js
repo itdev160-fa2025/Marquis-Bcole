@@ -22,12 +22,15 @@ function addTaskElement(task) {
     taskEl.appendChild(textEl);
     listEl.appendChild(taskEl);
 }
-
+//click handler
 function addTask(event) {
     var inputEl = document.getElementById('input-task');
     if (inputEl.value !== '') {
+        //new tasks
         var id = 'item-' + tasks.length;
+
         var task = new Task(id, inputEl.value, taskStatus.active);
+
         tasks.push(task);
         addTaskElement(task);
         inputEl.value = '';
@@ -35,6 +38,7 @@ function addTask(event) {
 }
 
 function completeTask(event) {
+    // gets task els
     var taskEl = event.target;
     var id = taskEl.id;
 

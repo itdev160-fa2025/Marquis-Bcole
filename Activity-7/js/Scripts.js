@@ -1,18 +1,17 @@
-var task = []
+var tasks = [];
 
 var taskStatus = {
-    active : 'active',
-    completed : 'completed'
+    active: 'active',
+    completed: 'completed'
 };
 
-function Task (id, name, status){
+function Task(id, name, status) {
     this.id = id;
     this.name = name;
     this.status = status;
 }
 
-function addTaskElement (task){
-
+function addTaskElement(task) {
     var listEl = document.getElementById('active-list');
     var taskEl = document.createElement('li');
     var textEl = document.createTextNode(task.name);
@@ -21,47 +20,38 @@ function addTaskElement (task){
 
     // adds text to "task" element
     taskEl.appendChild(textEl);
-
     listEl.appendChild(taskEl);
 }
 
-//click handler
-
-function addTask(event){
+function addTask(event) {
     var inputEl = document.getElementById('input-task');
-    if (inputEl.value != ''){
-        var id = 'item-' + task.length
+    if (inputEl.value !== '') {
+        var id = 'item-' + tasks.length;
+        var task = new Task(id, inputEl.value, taskStatus.active);
+        tasks.push(task);
+        addTaskElement(task);
+        inputEl.value = '';
     }
-
-    // new tasks
-    var task = new Task(id, inputEl.value, taskStatus.active);
-    task.push(task);
-    // adds to DOM
-    addTaskElement(task);
-    //reset
-    inputEl.value = ''
 }
 
-function completTask(event){
+function completeTask(event) {
     var taskEl = event.target;
     var id = taskEl.id;
 
-    for (var e = 0; e < task.length; e++){
-        if (task[e].id === id){
-            task[e].status = taskStatus.completed;
+    for (var e = 0; e < tasks.length; e++) {
+        if (tasks[e].id === id) {
+            tasks[e].status = taskStatus.completed;
             break;
         }
     }
-    
+
     taskEl.remove();
     document.getElementById('completed-list').appendChild(taskEl);
-
-    function init (){
-        document.getElementById('add-task').onclick = addTask;
-
-        document.getElementById('active-list').onclick = completTask;
-
-        document.getElementById('input-task').onkeypress = clickButton;
-    }
-    init();
 }
+
+function init() {
+    document.getElementById('add-task').onclick = addTask;
+    document.getElementById('active-list').onclick = completeTask;
+}
+
+window.onload = init;

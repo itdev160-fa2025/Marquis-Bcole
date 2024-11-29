@@ -11,18 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <title>Recipe Browser</title>
-    <script src="scripts.js"></script>
     <!--icon-->
     <link rel="shortcut icon" href="icon/Food_2-256.webp" type="image/x-icon">
 </head>
 
 <body>
-    <!--undo (should be center focused home page)-->
     <header>
-        <h1>Recipe Browser</h1>
-        <label for="search">Search for recipes:</label>
-        <input type="text" id="search" placeholder="Browse for a recipe..">
-        <button id="search-button">search</button>
+        <h1 class="header-title">Recipe Browser</h1>
     </header>
     <nav role="navigation">
         <ul>
@@ -30,12 +25,22 @@
         </ul>
     </nav>
     <main>
-        <section id="recipe-list"></section>
-        <section id="recipe-details"></section>
+        <section id="search-section" role="search">
+            <label for="search">Search for recipes:</label>
+            <input type="text" id="search" placeholder="Browse for a recipe..">
+            <button id="search-button" type="button">search</button>
+        </section>
+        <section id="recipe-list">
+        <!--phold-->
+        </section>
+        <section id="recipe-details">
+        <!--phold-->
+        </section>
     </main>
     
     <footer>
         <p>Recipe Browser MATC 2024</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

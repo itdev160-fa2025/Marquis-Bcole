@@ -3,34 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fill text">
+    <meta name="description" content="Recipe Browser">
     <link rel="stylesheet" href="css/HomeStyles.css">
-    <!-- font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <title>Recipe Browser</title>
-    <!--icon-->
     <link rel="shortcut icon" href="icon/Food_2-256.webp" type="image/x-icon">
 </head>
-
 <body>
     <main>
-            <section id="centered-home" role="main">
-                <h1 class="header-title">Recipe Browser</h1>
-                <form id="search-section" role="search">
-                    <label for="search" class="visually-hidden">Search for recipes:</label>
-                    <input type="text" id="search" placeholder="Browse for a recipe...">
-                    <button id="search-button" type="button">Search</button>
-                </form>
-            </section>
-            <section id="recipe-list">
-                <!--phold-->
-            </section>
+        <h1>Recipe Browser</h1>
+        <input type="text" id="search" onkeyup="FilSearch()" placeholder="Start Typing..." title="Type in a recipe">
+        <ul id="recipes">
+            <!--js-->
+        </ul>
     </main>
     <footer>
         <p>Recipe Browser MATC 2024</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
